@@ -1,0 +1,32 @@
+# Write a program that analyzes the entered number and, depending on the number, gives 
+# the day of the week that corresponds to this number (1 is Monday, 2 is Tuesday, etc.). Take 
+# into account cases of entering numbers from 8 and more, as well as cases of entering non-numerical data.
+
+print("Give me a number the day of (1 is Monday, 2 is Tuesday, etc.)")
+
+try:
+    choice = int(input("Enter your number: "))
+
+    match choice:
+        case 1:
+            print("Monday")
+        case 2:
+            print("Tuesday")
+        case 3:
+            print("Wednesday")
+        case 4:
+            print("Thursday")
+        case 5:
+            print("Friday")
+        case 6:
+            print("Saturday")
+        case 7:
+            print("Sunday")
+
+    if choice > 7:
+        raise ValueError("Obtain error: not exist!")
+    elif choice <= 0:
+        raise ValueError("Obtain error: not exist!")    
+
+except ValueError as e:
+   print(e)
